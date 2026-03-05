@@ -1,0 +1,9 @@
+Routing tables
+
+Internet:
+Destination        Gateway            Flags     Netif Expire
+default            10.0.2.1           UGS         em0
+10.0.2.0/24        link#1             U           em0
+10.8.0.0/24        link#8             U        ovpns1
+192.168.10.0/24    link#2             U           em1
+192.168.20.0/24    link#3             U           em2

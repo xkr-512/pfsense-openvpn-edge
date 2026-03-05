@@ -1,0 +1,25 @@
+block drop in log inet all label "Default deny rule IPv4" ridentifier 1000000103
+block drop out log inet all label "Default deny rule IPv4" ridentifier 1000000104
+anchor "userrules/*" all
+pass in log quick on openvpn inet proto tcp from 10.8.0.0/24 to <LAN__NETWORK> port = https flags S/SA keep state label "USER_RULE: OVPN > LAN HTTPS" label "id:1772684846" ridentifier 1772684846
+pass in log quick on openvpn inet proto tcp from 10.8.0.0/24 to <LAN__NETWORK> port = http flags S/SA keep state label "USER_RULE: OVPN > LAN HTTP" label "id:1772684792" ridentifier 1772684792
+pass in log quick on openvpn inet proto tcp from 10.8.0.0/24 to <LAN__NETWORK> port = ssh flags S/SA keep state label "USER_RULE: OVPN > LAN SSH" label "id:1772684369" ridentifier 1772684369
+pass in log quick on openvpn inet proto icmp from any to <LAN__NETWORK> keep state label "USER_RULE: OVPN > LAN ICMP" label "id:1772679014" ridentifier 1772679014
+block drop in log quick on em0 reply-to (em0 10.0.2.1) inet proto tcp from any to 10.0.2.3 port = krb524 flags S/SA label "USER_RULE: WAN 4444 DROP" label "id:1772669072" ridentifier 1772669072
+block return in log quick on em0 reply-to (em0 10.0.2.1) inet proto tcp from any to 10.0.2.3 port = 81 flags S/SA label "USER_RULE: WAN 81 REJECT" label "id:1772668605" ridentifier 1772668605
+pass in quick on em0 reply-to (em0 10.0.2.1) inet proto tcp from any to 192.168.20.100 port = http flags S/SA keep state label "USER_RULE: NAT WAN 80 > DMZ nginx" label "id:1772667147" ridentifier 1772667147
+pass in quick on em0 reply-to (em0 10.0.2.1) inet proto udp from any to 10.0.2.3 port = openvpn keep state label "USER_RULE: OpenVPN OpenVPN Remote Access wizard" label "id:1772672676" ridentifier 1772672676
+pass in log quick on em1 inet proto icmp all keep state label "USER_RULE: LAN > ICMP" label "id:1772683686" ridentifier 1772683686
+pass in log quick on em1 inet proto udp from <LAN__NETWORK> to any port = ntp keep state label "USER_RULE: LAN > WAN NTP" label "id:1772683667" ridentifier 1772683667
+pass in log quick on em1 inet proto tcp from <LAN__NETWORK> to any port = https flags S/SA keep state label "USER_RULE: LAN > WAN HTTPS" label "id:1772683626" ridentifier 1772683626
+pass in log quick on em1 inet proto tcp from <LAN__NETWORK> to any port = http flags S/SA keep state label "USER_RULE: LAN > WAN HTTP" label "id:1772683599" ridentifier 1772683599
+pass in log quick on em1 inet proto tcp from <LAN__NETWORK> to 192.168.10.1 port = domain flags S/SA keep state label "USER_RULE: LAN > pfsense DNS" label "id:1772683570" ridentifier 1772683570
+pass in log quick on em1 inet proto udp from <LAN__NETWORK> to 192.168.10.1 port = domain keep state label "USER_RULE: LAN > pfsense DNS" label "id:1772683570" ridentifier 1772683570
+pass in log quick on em2 inet proto tcp from <OPT1__NETWORK> to 192.168.20.1 port = domain flags S/SA keep state label "USER_RULE: DMZ > pfSense DNS" label "id:1772679838" ridentifier 1772679838
+pass in log quick on em2 inet proto udp from <OPT1__NETWORK> to 192.168.20.1 port = domain keep state label "USER_RULE: DMZ > pfSense DNS" label "id:1772679838" ridentifier 1772679838
+pass in log quick on em2 inet proto tcp from <OPT1__NETWORK> to any port = http flags S/SA keep state label "USER_RULE: DMZ > WAN HTTP" label "id:1772664963" ridentifier 1772664963
+pass in log quick on em2 inet proto udp from <OPT1__NETWORK> to any port = http keep state label "USER_RULE: DMZ > WAN HTTP" label "id:1772664963" ridentifier 1772664963
+pass in log quick on em2 inet proto tcp from <OPT1__NETWORK> to any port = https flags S/SA keep state label "USER_RULE: DMZ > WAN HTTPS" label "id:1772664993" ridentifier 1772664993
+pass in log quick on em2 inet proto udp from <OPT1__NETWORK> to any port = https keep state label "USER_RULE: DMZ > WAN HTTPS" label "id:1772664993" ridentifier 1772664993
+pass in log quick on em2 inet proto icmp from <OPT1__NETWORK> to 192.168.20.1 keep state label "USER_RULE: DMZ > pfSense DMZ ICMP" label "id:1772664881" ridentifier 1772664881
+block drop in log quick on em2 inet from <OPT1__NETWORK> to <LAN__NETWORK> label "USER_RULE: Block DMZ > LAN" label "id:1772679542" ridentifier 1772679542

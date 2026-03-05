@@ -1,0 +1,14 @@
+em0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+	inet 10.0.2.3 netmask 0xffffff00 broadcast 10.0.2.255
+	status: active
+em1: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+	inet 192.168.10.1 netmask 0xffffff00 broadcast 192.168.10.255
+	status: active
+em2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+	description: DMZ
+	inet 192.168.20.1 netmask 0xffffff00 broadcast 192.168.20.255
+	status: active
+ovpns1: flags=1008043<UP,BROADCAST,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 1500
+	inet 10.8.0.1 netmask 0xffffff00 broadcast 10.8.0.255
+	groups: tun openvpn
+	Opened by PID 26385

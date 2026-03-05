@@ -1,0 +1,2 @@
+nat on em0 inet from <tonatsubnets> to any -> 10.0.2.3 port 1024:65535
+rdr on em0 inet proto tcp from any to 10.0.2.3 port = http -> 192.168.20.100

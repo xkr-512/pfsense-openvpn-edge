@@ -1,0 +1,9 @@
+Mar  5 05:28:28 pfSense-edge openvpn[81341]: 10.0.2.5:38102 [uservpn] Peer Connection Initiated with [AF_INET]10.0.2.5:38102
+Mar  5 05:28:28 pfSense-edge openvpn[61278]: user 'uservpn' authenticated
+Mar  5 05:28:29 pfSense-edge openvpn[81341]: uservpn/10.0.2.5:38102 MULTI_sva: pool returned IPv4=10.8.0.2, IPv6=(Not enabled)
+Mar  5 05:28:29 pfSense-edge openvpn[21346]: openvpn server 'ovpns1' user 'uservpn' address '10.0.2.5:38102' - connecting
+Mar  5 05:28:29 pfSense-edge openvpn[26232]: openvpn server 'ovpns1' user 'uservpn' address '10.0.2.5:38102' - connected
+Mar  5 05:33:29 pfSense-edge openvpn[81341]: uservpn/10.0.2.5:38102 Inactivity timeout (--inactive), exiting
+Mar  5 05:33:29 pfSense-edge openvpn[43915]: openvpn server 'ovpns1' user 'uservpn' address '10.0.2.5:38102' - disconnected
+Mar  5 08:05:17 pfSense-edge openvpn[26385]: UDPv4 link local (bound): [AF_INET]10.0.2.3:1194
+Mar  5 08:05:17 pfSense-edge openvpn[26385]: Initialization Sequence Completed
