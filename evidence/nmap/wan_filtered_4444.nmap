@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Thu Mar  5 08:25:56 2026 as: nmap -Pn -sS -p 4444 -oA /root/nmap_out/wan_filtered_4444 10.0.2.3
+Nmap scan report for 10.0.2.3
+Host is up (0.00058s latency).
+
+PORT     STATE    SERVICE
+4444/tcp filtered krb524
+MAC Address: 08:00:27:38:3C:82 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+
+# Nmap done at Thu Mar  5 08:25:57 2026 -- 1 IP address (1 host up) scanned in 0.63 seconds

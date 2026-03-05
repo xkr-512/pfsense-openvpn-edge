@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Thu Mar  5 08:24:26 2026 as: nmap -Pn -sS -p 80 -oA /root/nmap_out/wan_open_80 10.0.2.3
+Host: 10.0.2.3 ()	Status: Up
+Host: 10.0.2.3 ()	Ports: 80/open/tcp//http///
+# Nmap done at Thu Mar  5 08:24:40 2026 -- 1 IP address (1 host up) scanned in 14.25 seconds

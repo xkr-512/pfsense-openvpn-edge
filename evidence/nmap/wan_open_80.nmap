@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Thu Mar  5 08:24:26 2026 as: nmap -Pn -sS -p 80 -oA /root/nmap_out/wan_open_80 10.0.2.3
+Nmap scan report for 10.0.2.3
+Host is up (0.00094s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 08:00:27:38:3C:82 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+
+# Nmap done at Thu Mar  5 08:24:40 2026 -- 1 IP address (1 host up) scanned in 14.25 seconds

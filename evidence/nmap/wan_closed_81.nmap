@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Thu Mar  5 08:25:20 2026 as: nmap -Pn -sS -p 81 -oA /root/nmap_out/wan_closed_81 10.0.2.3
+Nmap scan report for 10.0.2.3
+Host is up (0.0014s latency).
+
+PORT   STATE  SERVICE
+81/tcp closed hosts2-ns
+MAC Address: 08:00:27:38:3C:82 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+
+# Nmap done at Thu Mar  5 08:25:22 2026 -- 1 IP address (1 host up) scanned in 1.11 seconds

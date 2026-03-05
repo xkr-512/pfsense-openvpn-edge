@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Thu Mar  5 08:25:56 2026 as: nmap -Pn -sS -p 4444 -oA /root/nmap_out/wan_filtered_4444 10.0.2.3
+Host: 10.0.2.3 ()	Status: Up
+Host: 10.0.2.3 ()	Ports: 4444/filtered/tcp//krb524///
+# Nmap done at Thu Mar  5 08:25:57 2026 -- 1 IP address (1 host up) scanned in 0.63 seconds
