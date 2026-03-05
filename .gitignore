@@ -1,0 +1,5 @@
+*.ovpn
+*.p12
+*.key
+*.pem
+config.xml
