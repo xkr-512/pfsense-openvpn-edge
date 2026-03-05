@@ -23,4 +23,4 @@ A complete “edge” lab built in VirtualBox: pfSense as firewall/router with W
 - `analysis/` : Wireshark filters and interpretation
 - `pcaps/` : packet captures used as proof
 - `evidence/nmap/` : nmap outputs (`-oA` → .nmap/.gnmap/.xml)
-- `evidence/pfsense/` : pfSense exports (raw + cleaned versions)
+- `evidence/pfsense/` : pfSense exports (raw)
